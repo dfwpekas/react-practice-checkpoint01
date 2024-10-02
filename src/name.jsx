@@ -1,6 +1,5 @@
+import  product  from "./product.jsx";
 // A component that displays the name prop from the product object
-
-import { product } from "./product";
 
 const Name = () => {
     return (

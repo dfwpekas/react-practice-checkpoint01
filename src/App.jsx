@@ -1,35 +1,36 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import React from "react";
+import { Card, Container } from "react-bootstrap";
+import Name from "./name.jsx";
+import Price from "./price.jsx";
+import Description from "./description.jsx";
+import ImageURL from "./imageURL.jsx";
+import './App.css';
 
-function App() {
-  const [count, setCount] = useState(0)
 
-  return (
-    <>
-      <div>
-        <a href="https://vitejs.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
-  )
+
+const firstName = "";
+
+const welcomeImageUrl = 'https://media.istockphoto.com/id/1776871466/vector/hand-icon-with-white-fill-editable-stroke.jpg?s=1024x1024&w=is&k=20&c=Fj_h-zol5sEeF6H9c8DrZNLyUER5HlygRgh8uTX02Oc=';
+
+
+const App = () => {
+
+    return (
+        <Container className="container-class">
+            <Card  className="card-class">
+                <Name />
+                <ImageURL />
+                <Description />
+                <Price />
+            </Card>
+            <>
+                {firstName ? <h3>hello {firstName}</h3> : <h3>hello there! </h3>} 
+                {firstName && (
+                    <img src={welcomeImageUrl} alt="welcome image" style={{width: '220px', height: '200px'}}/>
+                )}
+            </>
+        </Container>
+    )
 }
 
-export default App
+export default App;

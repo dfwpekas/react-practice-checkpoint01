@@ -1,4 +1,3 @@
-// a json object that represents a product
 const product = {
     name: 'AK-47',
     price: 1000,
@@ -8,3 +7,4 @@ const product = {
 
 export default product;
 
+// a json object that represents a product

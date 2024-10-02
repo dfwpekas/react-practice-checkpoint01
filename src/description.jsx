@@ -1,5 +1,5 @@
+import product from './product.jsx';
 // A component that displays the description prop from the product object
-import product from './product';
 
 const Description = () => {
     return (
